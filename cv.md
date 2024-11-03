@@ -13,3 +13,21 @@ My professional experience includes teaching subjects on creating websites using
 My strengths are teamwork, attention to detail and focus on results. I can clearly express my thoughts both orally and in writing, quickly adapt to changes and try to keep up with new technologies and trends. I have experience working with animation, creating adaptive interfaces and using the Bootstrap library.
 
 It is important for me to constantly develop, learn new things and solve interesting problems. I am open to development, creative in solving problems and ready to contribute to cool projects. I am confident that working in a professional team will not only help me master new knowledge, but also reveal my potential.
+## Skills:
+- HTML
+- CSS
+- JavaScript Basics
+- Git, GitHub
+- Figma, pixso 
+_____
+## Code example:
+```javascript
+playBtn.addEventListener('click',()=>{
+    const isPlaying = player.classList.contains('play')
+    if (isPlaying) {
+        pauseSong()
+    } else{
+        playSong()
+    }
+})
+
