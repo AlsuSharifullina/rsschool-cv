@@ -1,5 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    cursor:default;
 }
+:root{
+    --oswald:"Oswald", serif;
+    --italiana:"Italiana", serif;
+    --bg--color: #ffffff; 
+    --text--color: #000000; 
+    --icon-color: #000000; 
+}
+body{
+    background-color: var(--bg--color);
+    color: var(--text--color);
+    transition:  0.3s, color 0.3s;
+    overflow:auto; 
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+.page-content {
+    padding: 0 125px;
+    overflow: auto; 
+    height: 100vh;
+    position: relative;
+}
+
+.menu_toggler:checked ~ .page-content {
+    height: 100vh;
+    overflow: hidden;
+}
+body.dark-mode {
+    --bg--color: #000;
+    --text--color: #fff;
+    --icon-color: #ffffff;
+    background-color: var(--bg--color);
+    color: var(--text--color);
+}
+html{
+    font-size: 21px;
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 6rem;
+    font-family: var(--italiana);
+}
+
+h2{
+    font-size: 4rem;
+    opacity: 0.5;
+    font-family: var(--italiana);
+    text-transform: uppercase;
+}
+h3{
+    font-size: 4rem;
+}
+.accordion-button h4{
+    font-size: 1rem;
+}
+p{
+    font-size: 1rem;
+}
+
+/* basis structur */
