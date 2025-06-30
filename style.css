@@ -307,8 +307,6 @@ p {
     margin: 100px auto;
     /* min-height: 50vh;
     height: 100%; */
-
-
 }
 
 .about__left {
@@ -493,6 +491,47 @@ body.dark-mode .accordion-button::after {
     transform: rotate(180deg);
 }
 /* end skills */
+
+/* start projects */
+.projects {
+    max-width: 1400px;
+    width: 100%;
+    min-height: fit-content;
+    height: 100%;
+    margin: 50px auto;
+    display: flex;
+    align-items: end;
+}
+.projects__left {
+    width: 50%;
+    display: flex;
+    align-items: end;
+}
+.projects__right {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 1%;
+}
+.projects__card {
+    background: var(--bg--color);
+}
+.projects__card a img:hover{
+    transform: scale(0.9);
+    filter:  grayscale(0.5) ;
+    cursor: pointer;
+}
+.projects__card a img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(198, 197, 197);
+    filter:  grayscale(1) ;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+/* end projects */
 
 
 /* start animation */
