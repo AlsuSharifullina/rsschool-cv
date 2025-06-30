@@ -43,3 +43,38 @@ function getOpenBtn(){
     return openBtn
 }
 ```
+___
+## Experience:
+- EasyCode  
+*Август 2024 — настоящее время* (11 месяцев)  
+**Преподаватель веб-разработки**  
+- Преподавала HTML, CSS, JS (включая Flexbox, Grid, адаптивность)  
+- Разрабатывала учебные проекты (лендинги, многостраничные сайты, одностраничные приложения)  
+- Вела практические занятия с разбором макетов из Figma  
+
+___
+
+- IT школа Hello world, Санкт-Петербург  
+*Февраль 2023 — Август 2024* (1 год 7 месяцев)  
+**Преподаватель программирования**  
+- Преподаю HTML, CSS, JavaScript с упором на практику: создание лендингов, сайтов-визиток, адаптивных макетов  
+- Объясняю современные подходы к вёрстке: Flexbox, Grid, адаптация под мобильные устройства, семантика, БЭМ  
+- Проводила занятия по созданию сайтов по макетам Figma с последующим переносом в код  
+- Руководила учебными мини-проектами — от прототипа до публикации (включая Tilda и GitHub Pages)  
+- Обучала основам дизайна в Figma: создание логотипов, макетов сайтов и интерфейсов, визуализация проектов через мокапы  
+- Вела курс по 3D-моделированию в Blender: моделирование и рендер трёхмерных объектов для игр и презентаций  
+____
+## Projects
+My projects are available at the link:
+[alsusharifullina.github.io/cvv/](https://alsusharifullina.github.io/cvv/)
+
+___
+## Education:
+- Orenburg State Pedagogical University
+- Stepik: html, css
+- RS Schools Course «JavaScript/Front-end. Stage 0»
+- Lushchenko Alexander course javascript 24(in process)
+
+___
+## Language:
+- English - A2 (B1 in process)
