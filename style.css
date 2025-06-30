@@ -346,6 +346,154 @@ p {
 /* end about */
 
 
+/* start skills */
+.skills {
+    min-height: fit-content;
+    height: 100%;
+    display: flex;
+    margin: 100px auto;
+}
+.skills__left {
+    position: relative;
+    width: 50%;
+}
+.skills__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    z-index: 11;
+
+}
+.skills__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.skills__bg img{
+    position: absolute;
+    width: 7%;
+    opacity: 0.7;
+}
+.icon__css {
+    top: 0;
+    left: 0;
+    animation: move-icon__css 4s ease-out 0s alternate infinite;
+}
+.icon__figma {
+    top: 0;
+    right: 0;
+    animation: move-icon__figma 5s ease-in-out 0s alternate infinite;
+}
+.icon__git {
+    bottom: 0;
+    left: 0;
+    animation: move-icon__git 3s linear 0s alternate infinite;
+}
+.icon__html {
+    bottom: 0;
+    right: 0;
+    animation: move-icon__html 7s ease 0s alternate infinite;
+}
+.icon__js {
+    top: 50%;
+    left: 50%;
+    animation: move-icon__js 4s ease 0s alternate infinite;
+}
+.skills__right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-family: var(--oswald);
+}
+
+/* accordoin */
+/* Общие стили аккордеона */
+.accordion-button {
+    background-color: var(--bg--color);
+    color: var(--text--color);
+    font-family: var(--oswald);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Убираем голубое выделение при клике */
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Стиль для открытой кнопки аккордеона */
+.accordion-button:not(.collapsed) {
+    background-color: var(--bg--color);
+    color: var(--text--color);
+}
+
+/* Стиль для содержимого аккордеона */
+.accordion-body {
+    background-color: var(--bg--color);
+    color: var(--text--color);
+}
+
+/* Настройка стрелки аккордеона */
+.accordion-button::after {
+    filter: brightness(0); /* Делаем стрелку черной */
+}
+
+/* Если тема темная, меняем цвет стрелки */
+body.dark-mode .accordion-button::after {
+    filter: brightness(1); /* Делаем стрелку белой */
+}
+
+/* При открытии аккордеона */
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg); /* Поворачиваем стрелку */
+}
+/* Убираем голубое выделение (focus) */
+.accordion-button:focus,
+.accordion-button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Цвет текста в кнопках аккордеона */
+.accordion-button {
+    background-color: var(--bg--color) !important;
+    color: var(--text--color) !important;
+    font-family: var(--oswald);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Если аккордеон открыт */
+.accordion-button:not(.collapsed) {
+    background-color: var(--bg--color) !important;
+    color: var(--text--color) !important;
+}
+
+/* Стрелка в аккордеоне */
+.accordion-button::after {
+    filter: brightness(0); /* Черная стрелка */
+}
+
+/* В темной теме делаем стрелку белой */
+body.dark-mode .accordion-button::after {
+    filter: brightness(1);
+}
+
+/* Когда аккордеон открыт, поворачиваем стрелку */
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+/* end skills */
+
 
 /* start animation */
 @keyframes typik{
@@ -354,6 +502,82 @@ p {
     }
     100%{
         width: 100%;
+    }
+}
+@keyframes move-icon__css{
+    0%{
+        top: 0;
+        left: 0;
+    }
+    50%{
+        top: 50%;
+        left: 20%;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        left: 60%;
+    }
+}
+@keyframes move-icon__figma{
+    0%{
+        top: 0;
+        right: 0;
+    }
+    50%{
+        top: 0;
+        right: 30%;
+    }
+    100%{
+        top: 100%;
+        right: 100%;
+        opacity: 0;
+    }
+}
+@keyframes move-icon__git{
+    0%{
+        bottom: 30%;
+        left: 30%;
+    }
+    50%{
+        bottom: 50%;
+        left: 50%;
+    }
+    100%{
+        bottom: 60%;
+        left: 100%;
+        opacity: 0;
+    }
+}
+@keyframes move-icon__html{
+    0%{
+        bottom: 0;
+        right: 0;
+    }
+    50%{
+        bottom: 30%;
+        right: 0;
+        opacity: 0;
+    }
+    100%{
+        bottom: 80%;
+        right: 100%;
+    }
+}
+@keyframes move-icon__js{
+    0%{
+        top: 50%;
+        left: 0;
+        opacity: 0;
+    }
+    50%{
+        top: 50%;
+        left: 100%;
+    }
+    100%{
+        top: 80%;
+        left: 50%;
+        opacity: 0;
     }
 }
 /* end animation */
