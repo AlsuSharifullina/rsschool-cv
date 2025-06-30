@@ -24,9 +24,11 @@ html, body {
     width: 100%;
 }
 .page-content {
+    max-width: 1400px;
+    width: 100%;
+    margin: 50px auto;
     padding: 0 125px;
     overflow: auto; 
-    height: 100vh;
     position: relative;
 }
 
@@ -232,3 +234,40 @@ p{
     display: none; /* Скрывает меню при переходе */
 }
 /* end burger */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    /* min-height: 50vh; */
+}
+.hero__left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.hero__text {
+    width: 100%;
+    height: 100%;
+    font-family: var(--italiana);
+    text-transform: capitalize;
+}
+.hero__sub-title {
+    width: 100%;
+    font-family: var(--italiana);
+    
+}
+.hero__title {
+    font-family: var(--italiana);
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+.hero__right {
+    width: 50%;
+}
+.hero__right img{
+    width: 100%;
+    object-fit: cover;
+}
