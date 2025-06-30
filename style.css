@@ -68,3 +68,79 @@ p{
 }
 
 /* basis structur */
+
+.header {
+    max-width: 1400px;
+    width: 100%;
+    min-height: 10vh;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header__nav {
+    width: 50%;
+}
+
+.header__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    list-style: none;
+}
+
+.header__item a {
+    font-family: var(--oswald);
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--text--color);
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.header__item a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.header__theme{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.theme-toggler:hover{
+    cursor: pointer;
+}
+
+.theme-toggler {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+}
+.theme-toggler__label {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.theme-toggler__label img{
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease-in-out;
+}
+.theme-toggler:checked + .theme-toggler__label img {
+    content: url('./img/sun.svg') 
+}
+
+/* end header */
