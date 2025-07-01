@@ -317,8 +317,12 @@ p {
     justify-content: space-between;
     width: 50%;
 }
-
+.about__quote-container{
+    width: 50%;
+    height: 50px;
+}
 .about__quote {
+    display: block;
     width: 50%;
     font-size: 0.8rem;
     font-family: var(--oswald);
@@ -556,7 +560,7 @@ body.dark-mode .accordion-button::after {
 /* start code */
 .code {
     display: flex;
-    height: 80vh;
+    /* height: 80vh; */
 }
 
 .code__left {
@@ -577,16 +581,11 @@ pre {
     height: 100%;
 }
 
-code {
-    /* font-family: 'Fira Code', monospace; */
-
-}
-
 
 /* end code */
 /* start contacts */
 .contacts {
-    height: 80vh;
+    /* height: 80vh; */
     margin: 50px 0;
     display: flex;
     align-items: end;
@@ -752,3 +751,82 @@ code {
 
 /* end animation */
 
+/* media */
+@media (max-width:991.98px) {
+    .page-content{
+        padding: 0 80px;
+    }
+    .header__nav{
+        display: none;
+    }
+    .header__item a:hover,
+    .contacts__item a:hover,
+    .constant__cv a:hover {
+        opacity: 1;
+    }
+    .projects__card a img:hover{
+        filter:  grayscale(0) ;
+        transform: scale(1);
+    }
+    .menu_toggler, 
+    .menu_burger-button {
+        display: block;
+    }
+    .header__nav-burger{
+        display: flex;
+    }
+    .nav__list-burger .header__item{
+        margin-bottom: 8px;
+        margin-left: 0;
+        font-style: 24px;
+    }
+    .hero, 
+    .about,
+    .skills,
+    .projects,
+    .contacts,
+    .code {
+        flex-direction: column;
+    }
+    .hero__left,
+    .hero__right,
+    .about__left,
+    .about__right,
+    .skills__left,
+    .skills__right,
+    .projects__left,
+    .projects__right,
+    .constant__left,
+    .contacts__right,
+    .code__left,
+    .code__right  {
+        padding-bottom: 10%;
+        width: 100%;
+    }
+    .about__left,
+    .constant__left {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+@media (max-width:767.98px){
+    html{
+        font-size: 18px;
+    }
+    .page-content {
+        padding: 0 20px;
+    }
+
+}
+@media (max-width:479.98px) {
+    .page-content {
+        padding: 0 20px;
+    }
+}
+@media (hover: none) {
+    .hover-effect {
+        pointer-events: none;
+    }
+}
+/* end media */
