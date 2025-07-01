@@ -36,6 +36,9 @@
                         <a href="#projects">projects</a>
                     </li>
                     <li class="header__item">
+                        <a href="#code">code</a>
+                    </li>
+                    <li class="header__item">
                         <a href="#contacts">contacts</a>
                     </li>
                 </ul>
@@ -57,6 +60,9 @@
                     </li>
                     <li class="header__item">
                         <a href="#projects">projects</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#code">code</a>
                     </li>
                     <li class="header__item">
                         <a href="#contacts">contacts</a>
@@ -267,33 +273,27 @@
             <!-- end section project -->
 
             <!-- start code example -->
-            <section class="code">
+            <section class="code" id="code">
                 <div class="code__left">
                     <h2 class="code__title">CODE EXAMPLE</h2>
                 </div>
                 <div class="code__right">
                     <pre>
                         <code>
-                            function getOpenBtn(){
-                                let openBtn = document.createElement('button')
-                                openBtn.classList.add('open-btn')
-                                openBtn.textContent = 'Открыть меня'
-
-                                openBtn.onclick = function(){
-                                    
-                                    if (menu.classList.contains('open') === true){
-                                        openBtn.textContent = 'Открыть меня'
-                                        menu.classList.remove('open')
-                                    }else{
-                                        openBtn.textContent = 'Закрыть меня'
-                                        menu.classList.add('open')
-                                    }
-                                }
-
-
-                                return openBtn
-                            }
-                        </code>
+function getOpenBtn(){
+    let openBtn = document.createElement('button')
+    openBtn.textContent = 'Открыть меня'
+    openBtn.onclick = function(){
+    if (menu.classList.contains('open') === true){
+    openBtn.textContent = 'Открыть меня'
+    }else{
+    openBtn.textContent = 'Закрыть меня'
+    menu.classList.add('open')
+    }
+    }
+    return openBtn
+    }
+</code>
                     </pre>
                 </div>
             </section>

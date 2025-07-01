@@ -316,7 +316,6 @@ p {
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
-
 }
 
 .about__quote {
@@ -325,7 +324,7 @@ p {
     font-family: var(--oswald);
     color: var(--text--color);
     text-transform: uppercase;
-    animation: typik 3s steps(30,end) infinite;
+    animation: typik 6s steps(40, end) infinite;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -353,10 +352,12 @@ p {
     display: flex;
     margin: 100px auto;
 }
+
 .skills__left {
     position: relative;
     width: 50%;
 }
+
 .skills__content {
     position: absolute;
     top: 0;
@@ -368,6 +369,7 @@ p {
     z-index: 11;
 
 }
+
 .skills__bg {
     position: absolute;
     top: 0;
@@ -376,36 +378,43 @@ p {
     height: 100%;
     z-index: 10;
 }
-.skills__bg img{
+
+.skills__bg img {
     position: absolute;
     width: 7%;
     opacity: 0.7;
 }
+
 .icon__css {
     top: 0;
     left: 0;
     animation: move-icon__css 4s ease-out 0s alternate infinite;
 }
+
 .icon__figma {
     top: 0;
     right: 0;
     animation: move-icon__figma 5s ease-in-out 0s alternate infinite;
 }
+
 .icon__git {
     bottom: 0;
     left: 0;
     animation: move-icon__git 3s linear 0s alternate infinite;
 }
+
 .icon__html {
     bottom: 0;
     right: 0;
     animation: move-icon__html 7s ease 0s alternate infinite;
 }
+
 .icon__js {
     top: 50%;
     left: 50%;
     animation: move-icon__js 4s ease 0s alternate infinite;
 }
+
 .skills__right {
     width: 50%;
     display: flex;
@@ -444,18 +453,22 @@ p {
 
 /* Настройка стрелки аккордеона */
 .accordion-button::after {
-    filter: brightness(0); /* Делаем стрелку черной */
+    filter: brightness(0);
+    /* Делаем стрелку черной */
 }
 
 /* Если тема темная, меняем цвет стрелки */
 body.dark-mode .accordion-button::after {
-    filter: brightness(1); /* Делаем стрелку белой */
+    filter: brightness(1);
+    /* Делаем стрелку белой */
 }
 
 /* При открытии аккордеона */
 .accordion-button:not(.collapsed)::after {
-    transform: rotate(180deg); /* Поворачиваем стрелку */
+    transform: rotate(180deg);
+    /* Поворачиваем стрелку */
 }
+
 /* Убираем голубое выделение (focus) */
 .accordion-button:focus,
 .accordion-button:active {
@@ -480,7 +493,8 @@ body.dark-mode .accordion-button::after {
 
 /* Стрелка в аккордеоне */
 .accordion-button::after {
-    filter: brightness(0); /* Черная стрелка */
+    filter: brightness(0);
+    /* Черная стрелка */
 }
 
 /* В темной теме делаем стрелку белой */
@@ -492,152 +506,186 @@ body.dark-mode .accordion-button::after {
 .accordion-button:not(.collapsed)::after {
     transform: rotate(180deg);
 }
+
 /* end skills */
 
 /* start projects */
 .projects {
-    max-width: 1400px;
-    width: 100%;
-    min-height: fit-content;
-    height: 100%;
-    margin: 50px auto;
     display: flex;
     align-items: end;
+    min-height: fit-content;
+    height: 100%;
+    margin: 50px 0;
 }
+
 .projects__left {
     width: 50%;
     display: flex;
     align-items: end;
 }
+
 .projects__right {
     width: 50%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 1%;
 }
+
 .projects__card {
     background: var(--bg--color);
 }
-.projects__card a img:hover{
+
+.projects__card a img:hover {
     transform: scale(0.9);
-    filter:  grayscale(0.5) ;
+    filter: grayscale(0.5);
     cursor: pointer;
 }
-.projects__card a img{
+
+.projects__card a img {
     width: 100%;
     height: 100%;
     border: 1px solid rgb(198, 197, 197);
-    filter:  grayscale(1) ;
+    filter: grayscale(1);
     object-fit: cover;
     object-position: center;
     transition: 0.3s;
 }
+
 /* end projects */
+/* start code */
+.code {
+    display: flex;
+    height: 80vh;
+}
+
+.code__left {
+    width: 50%;
+    display: flex;
+    align-items: end;
+}
+
+.code__right {
+    width: 50%;
+    height: 100%;
+}
+
+pre {
+    width: 100%;
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    height: 100%;
+}
+
+code {
+    /* font-family: 'Fira Code', monospace; */
+
+}
+
+
+/* end code */
 
 
 /* start animation */
-@keyframes typik{
-    0%{
+@keyframes typik {
+    0% {
         width: 0;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
-@keyframes move-icon__css{
-    0%{
+
+@keyframes move-icon__css {
+    0% {
         top: 0;
         left: 0;
     }
-    50%{
+
+    50% {
         top: 50%;
         left: 20%;
         opacity: 0;
     }
-    100%{
+
+    100% {
         top: 0;
         left: 60%;
     }
 }
-@keyframes move-icon__figma{
-    0%{
+
+@keyframes move-icon__figma {
+    0% {
         top: 0;
         right: 0;
     }
-    50%{
+
+    50% {
         top: 0;
         right: 30%;
     }
-    100%{
+
+    100% {
         top: 100%;
         right: 100%;
         opacity: 0;
     }
 }
-@keyframes move-icon__git{
-    0%{
+
+@keyframes move-icon__git {
+    0% {
         bottom: 30%;
         left: 30%;
     }
-    50%{
+
+    50% {
         bottom: 50%;
         left: 50%;
     }
-    100%{
+
+    100% {
         bottom: 60%;
         left: 100%;
         opacity: 0;
     }
 }
-@keyframes move-icon__html{
-    0%{
+
+@keyframes move-icon__html {
+    0% {
         bottom: 0;
         right: 0;
     }
-    50%{
+
+    50% {
         bottom: 30%;
         right: 0;
         opacity: 0;
     }
-    100%{
+
+    100% {
         bottom: 80%;
         right: 100%;
     }
 }
-@keyframes move-icon__js{
-    0%{
+
+@keyframes move-icon__js {
+    0% {
         top: 50%;
         left: 0;
         opacity: 0;
     }
-    50%{
+
+    50% {
         top: 50%;
         left: 100%;
     }
-    100%{
+
+    100% {
         top: 80%;
         left: 50%;
         opacity: 0;
     }
 }
+
 /* end animation */
-
-
-
-    pre {
-      background-color: #2d2d2d;
-      color: #f8f8f2;
-      padding: 20px;
-      border-radius: 10px;
-      overflow-x: auto;
-      font-size: 14px;
-      line-height: 1.6;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    }
-
-    code {
-      /* font-family: 'Fira Code', monospace; */
-      white-space: pre;
-    }
-
