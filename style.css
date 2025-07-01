@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&family=WDXL+Lubrifont+TC&display=swap');
 
 * {
     padding: 0;
@@ -10,7 +11,8 @@
 
 :root {
     --oswald: "Oswald", serif;
-    --italiana: "Italiana", serif;
+    /* --italiana: "Italiana", serif; */
+    --italiana: "WDXL Lubrifont TC", sans-serif;
     --bg--color: #ffffff;
     --text--color: #000000;
     --icon-color: #000000;
@@ -620,3 +622,22 @@ body.dark-mode .accordion-button::after {
     }
 }
 /* end animation */
+
+
+
+    pre {
+      background-color: #2d2d2d;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    code {
+      /* font-family: 'Fira Code', monospace; */
+      white-space: pre;
+    }
+
