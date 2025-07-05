@@ -575,12 +575,11 @@ body.dark-mode .accordion-button::after {
     color: var(--text--color);
     text-decoration: none;
     margin-bottom: 0;
-    opacity: 0.5;
     transition: 0.3s;
 }
 .code__link:hover{
     cursor: pointer;
-    opacity: 1;
+    opacity: 0.5;
 }
 .code__right {
     width: 50%;
