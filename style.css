@@ -1,0 +1,845 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&family=WDXL+Lubrifont+TC&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+:root {
+    --oswald: "Oswald", serif;
+    /* --italiana: "Italiana", serif; */
+    --italiana: "WDXL Lubrifont TC", sans-serif;
+    --bg--color: #ffffff;
+    --text--color: #000000;
+    --icon-color: #000000;
+}
+
+body {
+    background-color: var(--bg--color);
+    color: var(--text--color);
+    transition: 0.3s, color 0.3s;
+    overflow: auto;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.page-content {
+    max-width: 1400px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 0 125px;
+    overflow: auto;
+    position: relative;
+}
+
+.menu_toggler:checked~.page-content {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body.dark-mode {
+    --bg--color: #000;
+    --text--color: #fff;
+    --icon-color: #ffffff;
+    background-color: var(--bg--color);
+    color: var(--text--color);
+}
+
+html {
+    font-size: 21px;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 6rem;
+    font-family: var(--italiana);
+}
+
+h2 {
+    font-size: 4rem;
+    opacity: 0.5;
+    font-family: var(--italiana);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+.accordion-button h4 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* basis structur */
+
+.header {
+    max-width: 1400px;
+    width: 100%;
+    min-height: 10vh;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header__nav {
+    width: 50%;
+}
+
+.header__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.header__item a {
+    font-family: var(--oswald);
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--text--color);
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.header__item a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.header__theme {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.theme-toggler:hover {
+    cursor: pointer;
+}
+
+.theme-toggler {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+}
+
+.theme-toggler__label {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.theme-toggler__label img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.theme-toggler:checked+.theme-toggler__label img {
+    content: url('./img/sun.svg')
+}
+
+/* end header */
+/* menu burger */
+
+.menu_toggler {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 95px;
+    top: 3px;
+    z-index: 20;
+    opacity: 0;
+}
+
+.menu_burger-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: none;
+    position: relative;
+    top: 0px;
+    list-style: none;
+    z-index: 15;
+    transition: 0.3s;
+}
+
+
+.menu_burger-button::before,
+.menu_burger-button::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    border-radius: 20px;
+    background: var(--icon-color);
+}
+
+.menu_burger-button::before {
+    top: 16px;
+}
+
+.menu_burger-button::after {
+    bottom: 16px;
+}
+
+.menu_toggler:checked~.menu_burger-button::before {
+    transform: rotate(45deg);
+    top: 20px;
+    background: var(--icon-color);
+}
+
+.menu_toggler:checked~.menu_burger-button::after {
+    transform: rotate(-45deg);
+    top: 20px;
+    background: var(--icon-color);
+}
+
+.menu_toggler:checked~.header__nav-burger {
+    height: 100vh;
+    overflow: hidden;
+    transform-origin: top right;
+}
+
+.header__nav-burger {
+    display: none;
+    height: 0;
+    width: 100%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0px;
+    z-index: 10;
+    background: var(--bg--color);
+    overflow: hidden;
+    transition: 0.3s;
+    transform-origin: top right;
+    z-index: 10;
+}
+
+.nav__list-burger {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu:not(:target) {
+    display: none;
+    /* Скрывает меню при переходе */
+}
+
+/* end burger */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    /* min-height: 50vh; */
+}
+
+.hero__left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.hero__text {
+    width: 100%;
+    height: 100%;
+    font-family: var(--italiana);
+    text-transform: capitalize;
+}
+
+.hero__sub-title {
+    width: 100%;
+    font-family: var(--italiana);
+}
+
+.hero__title {
+    font-family: var(--italiana);
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.hero__right {
+    width: 50%;
+}
+
+.hero__right img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* end hero */
+
+/* start about */
+.about {
+    display: flex;
+    margin: 100px auto;
+    /* min-height: 50vh;
+    height: 100%; */
+}
+
+.about__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+.about__quote-container{
+    width: 50%;
+    height: 50px;
+}
+.about__quote {
+    display: block;
+    width: 50%;
+    font-size: 0.8rem;
+    font-family: var(--oswald);
+    color: var(--text--color);
+    text-transform: uppercase;
+    animation: typik 6s steps(40, end) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.about__right {
+    display: flex;
+    align-items: end;
+    width: 50%;
+
+}
+
+.about__text {
+    font-family: var(--oswald);
+    color: var(--text--color);
+
+}
+
+/* end about */
+
+
+/* start skills */
+.skills {
+    min-height: fit-content;
+    height: 100%;
+    display: flex;
+    margin: 100px auto;
+}
+
+.skills__left {
+    position: relative;
+    width: 50%;
+}
+
+.skills__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    z-index: 11;
+
+}
+
+.skills__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.skills__bg img {
+    position: absolute;
+    width: 7%;
+    opacity: 0.7;
+}
+
+.icon__css {
+    top: 0;
+    left: 0;
+    animation: move-icon__css 4s ease-out 0s alternate infinite;
+}
+
+.icon__figma {
+    top: 0;
+    right: 0;
+    animation: move-icon__figma 5s ease-in-out 0s alternate infinite;
+}
+
+.icon__git {
+    bottom: 0;
+    left: 0;
+    animation: move-icon__git 3s linear 0s alternate infinite;
+}
+
+.icon__html {
+    bottom: 0;
+    right: 0;
+    animation: move-icon__html 7s ease 0s alternate infinite;
+}
+
+.icon__js {
+    top: 50%;
+    left: 50%;
+    animation: move-icon__js 4s ease 0s alternate infinite;
+}
+
+.skills__right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-family: var(--oswald);
+}
+
+/* accordoin */
+/* Общие стили аккордеона */
+.accordion-button {
+    background-color: var(--bg--color);
+    color: var(--text--color);
+    font-family: var(--oswald);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Убираем голубое выделение при клике */
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Стиль для открытой кнопки аккордеона */
+.accordion-button:not(.collapsed) {
+    background-color: var(--bg--color);
+    color: var(--text--color);
+}
+
+/* Стиль для содержимого аккордеона */
+.accordion-body {
+    background-color: var(--bg--color);
+    color: var(--text--color);
+}
+
+/* Настройка стрелки аккордеона */
+.accordion-button::after {
+    filter: brightness(0);
+    /* Делаем стрелку черной */
+}
+
+/* Если тема темная, меняем цвет стрелки */
+body.dark-mode .accordion-button::after {
+    filter: brightness(1);
+    /* Делаем стрелку белой */
+}
+
+/* При открытии аккордеона */
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+    /* Поворачиваем стрелку */
+}
+
+/* Убираем голубое выделение (focus) */
+.accordion-button:focus,
+.accordion-button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Цвет текста в кнопках аккордеона */
+.accordion-button {
+    background-color: var(--bg--color) !important;
+    color: var(--text--color) !important;
+    font-family: var(--oswald);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Если аккордеон открыт */
+.accordion-button:not(.collapsed) {
+    background-color: var(--bg--color) !important;
+    color: var(--text--color) !important;
+}
+
+/* Стрелка в аккордеоне */
+.accordion-button::after {
+    filter: brightness(0);
+    /* Черная стрелка */
+}
+
+/* В темной теме делаем стрелку белой */
+body.dark-mode .accordion-button::after {
+    filter: brightness(1);
+}
+
+/* Когда аккордеон открыт, поворачиваем стрелку */
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+/* end skills */
+
+/* start projects */
+.projects {
+    display: flex;
+    align-items: end;
+    min-height: fit-content;
+    height: 100%;
+    margin: 50px 0;
+}
+
+.projects__left {
+    width: 50%;
+    display: flex;
+    align-items: end;
+}
+
+.projects__right {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1%;
+}
+
+.projects__card {
+    background: var(--bg--color);
+}
+
+.projects__card a img:hover {
+    transform: scale(0.9);
+    filter: grayscale(0.5);
+    cursor: pointer;
+}
+
+.projects__card a img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(198, 197, 197);
+    filter: grayscale(1);
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+/* end projects */
+/* start code */
+.code {
+    display: flex;
+    /* height: 80vh; */
+}
+
+.code__left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.code__link{
+    font-family: var(--oswald);
+    font-weight: 500;
+    color: var(--text--color);
+    text-decoration: none;
+    margin-bottom: 0;
+    transition: 0.3s;
+}
+.code__link:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.code__right {
+    width: 50%;
+    height: 100%;
+}
+
+pre {
+    width: 100%;
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    height: 100%;
+}
+
+
+/* end code */
+/* start contacts */
+.contacts {
+    height: 80vh;
+    margin: 100px 0;
+    display: flex;
+    align-items: end;
+}
+.constant__left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.constant__cv a{
+    font-family: var(--oswald);
+    color: var(--text--color);
+    text-decoration:none ;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.constant__cv a:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.contacts__right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+.contacts__list {
+    list-style: none;
+}
+.contacts__item {
+    margin-bottom: 10px;
+}
+.contacts__item p{
+    font-family: var(--oswald);
+    font-weight: 500;
+    color: var(--text--color);
+    margin-bottom: 0;
+    opacity: 0.5;
+}
+.contacts__item a{
+    font-family: var(--oswald);
+    font-weight: 600;
+    color: var(--text--color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.contacts__item a:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.contacts__item a img{
+    width: 100px;
+    padding: 10px 0;
+}
+.contacts__item a img:hover{
+    cursor: pointer;
+}
+/* end contacts */
+
+/* start animation */
+@keyframes typik {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes move-icon__css {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    50% {
+        top: 50%;
+        left: 20%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        left: 60%;
+    }
+}
+
+@keyframes move-icon__figma {
+    0% {
+        top: 0;
+        right: 0;
+    }
+
+    50% {
+        top: 0;
+        right: 30%;
+    }
+
+    100% {
+        top: 100%;
+        right: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes move-icon__git {
+    0% {
+        bottom: 30%;
+        left: 30%;
+    }
+
+    50% {
+        bottom: 50%;
+        left: 50%;
+    }
+
+    100% {
+        bottom: 60%;
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes move-icon__html {
+    0% {
+        bottom: 0;
+        right: 0;
+    }
+
+    50% {
+        bottom: 30%;
+        right: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 80%;
+        right: 100%;
+    }
+}
+
+@keyframes move-icon__js {
+    0% {
+        top: 50%;
+        left: 0;
+        opacity: 0;
+    }
+
+    50% {
+        top: 50%;
+        left: 100%;
+    }
+
+    100% {
+        top: 80%;
+        left: 50%;
+        opacity: 0;
+    }
+}
+
+/* end animation */
+
+/* media */
+@media (max-width:991.98px) {
+    .page-content{
+        padding: 0 80px;
+    }
+    .header__nav{
+        display: none;
+    }
+    .header__item a:hover,
+    .contacts__item a:hover,
+    .constant__cv a:hover {
+        opacity: 1;
+    }
+    .projects__card a img:hover{
+        filter:  grayscale(0) ;
+        transform: scale(1);
+    }
+    .menu_toggler, 
+    .menu_burger-button {
+        display: block;
+    }
+    .header__nav-burger{
+        display: flex;
+    }
+    .nav__list-burger .header__item{
+        margin-bottom: 8px;
+        margin-left: 0;
+        font-style: 24px;
+    }
+    .hero, 
+    .about,
+    .skills,
+    .projects,
+    .contacts,
+    .code {
+        flex-direction: column;
+    }
+    .hero__left,
+    .hero__right,
+    .about__left,
+    .about__right,
+    .skills__left,
+    .skills__right,
+    .projects__left,
+    .projects__right,
+    .constant__left,
+    .contacts__right,
+    .code__left,
+    .code__right  {
+        padding-bottom: 10%;
+        width: 100%;
+    }
+    .about__left,
+    .constant__left,
+    .code__left{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+@media (max-width:767.98px){
+    html{
+        font-size: 18px;
+    }
+    .page-content {
+        padding: 0 20px;
+    }
+
+}
+@media (max-width:479.98px) {
+    .page-content {
+        padding: 0 20px;
+    }
+}
+@media (hover: none) {
+    .hover-effect {
+        pointer-events: none;
+    }
+}
+/* end media */

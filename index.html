@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icons.png" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/4ccf7ed77e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>CV</title>
+</head>
+
+<body>
+    <div class="page-content">
+        <header class="header">
+            <div class="header__theme">
+                <input type="checkbox" id="theme-toggler" class="theme-toggler">
+                <label for="theme-toggler" class="theme-toggler__label">
+                    <img src="./img/moon2.png" alt="moon2" class="fa-moon">
+                </label>
+            </div>
+            <!-- меню -->
+            <input type="checkbox" class="menu_toggler" id="menu_toggler">
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#about">about</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#skills">skills</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#projects">projects</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#code">code</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#contacts">contacts</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- menu burger -->
+
+            <label class="menu_burger-button" for="menu_toggler">
+                <span class="menu_line"></span>
+            </label>
+
+            <nav class="header__nav-burger">
+                <ul class="nav__list-burger">
+                    <li class="header__item">
+                        <a href="#about">about</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#skills">skills</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#projects">projects</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#code">code</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#contacts">contacts</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+        <!-- end header -->
+
+        <!-- start main -->
+        <main>
+            <section class="hero">
+                <div class="hero__left">
+                    <p class="hero__text">Hello, I'm</p>
+                    <h3 class="hero__sub-title">Alsu, junior</h3>
+                    <h1 class="hero__title">front-end <br>
+                        developer </h1>
+                </div>
+                <div class="hero__right">
+                    <img src="./img/photo.png" alt="photo">
+                </div>
+            </section>
+            <!-- end hero -->
+
+            <section class="about" id="about">
+                <div class="about__left">
+                    <div class="about__quote-container">
+                    <q class="about__quote">I build worlds out of code. </q>
+                    </div>
+                    <h2 class="about__title">about me</h2>
+                </div>
+                <div class="about__right">
+                    <p class="about__text">
+                        Frontend development for me is not just code, but a way to create user-friendly, thoughtful and
+                        aesthetically pleasing interfaces. I believe that a good website is one where technology works
+                        in harmony with design and the user experience becomes intuitive. This is what inspires me to
+                        evolve in my profession and constantly learn new tools.
+
+                        My path is one of continuous learning: courses, seminars, working with real projects. I value
+                        structure, I am able to plan tasks, work in a team and analyze details to find optimal
+                        solutions.It is important for me to be part of a team where professionalism, development and
+                        openness are valued. I am a quick learner, adapt to new challenges and am ready to bring real
+                        value to projects.
+                    </p>
+                </div>
+            </section>
+            <!-- end about -->
+
+            <!-- start skills -->
+            <section class="skills" id="skills">
+                <div class="skills__left">
+                    <div class="skills__content">
+                        <h2 class="skills__title">
+                            skills and education
+                        </h2>
+                    </div>
+                    <div class="skills__bg">
+                        <img class="icon__css" src="./img/css.png" alt="icon__css">
+                        <img class="icon__figma" src="./img/image10.svg" alt="icon__figma">
+                        <img class="icon__git" src="./img/git.png" alt="icon__git">
+                        <img class="icon__html" src="./img/html.png" alt="icon__html">
+                        <img class="icon__js" src="./img/js.png" alt="icon__js">
+                    </div>
+                </div>
+                <div class="skills__right accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <span>HTML &amp; CSS</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Semantic and adaptive layout</li>
+                                    <li>BEM methodology for convenient code structure</li>
+                                    <li>Flexbox, Grid, CSS variables, pseudo-classes and pseudo-elements</li>
+                                    <li>CSS animations (keyframes, working with media queries)</li>
+                                    <li>Using FontAwesome and Bootstrap to speed up development</li>
+                                    <li>I layout landing pages and multi-page sites</li>
+                                    <li>I work with layouts in Figma</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                <span>JavaScript (basis)</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>solving tasks on CodeWars</li>
+                                    <li>Learning how to work with DOM, functions and events</li>
+                                    <li>Learning React as the next step</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                <span> Git &amp; GitHub</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>I use Git for version control and teamwork</li>
+                                    <li>Initializing and cloning repositories</li>
+                                    <li>Working with branches, commits, pushes</li>
+                                    <li>Hosting projects on GitHub</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                <span>English- A2</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>I can read technical documentation</li>
+                                    <li>I use a translator to work with materials and communicate</li>
+                                    <li>Regular classes with a teacher, goal - B1 this year</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                <span>education</span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Orenburg State Pedagogical University 2016-2020</li>
+                                    <li>RS School: JS/Frontend. Stage 0 2024</li>
+                                    <li>RS School: JS/Frontend. Stage 0 2025 in process </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end skills -->
+
+            <!-- start project -->
+            <section class="projects" id="projects">
+                <div class="projects__left">
+                    <h2 class="projects__title">projects</h2>
+                </div>
+                <div class="projects__right">
+                    <div class="projects__card">
+                        <a href="https://alsusharifullina.github.io/metrica2/" target="_blank"><img
+                                src="./img/project7.PNG" alt="project"></a>
+                    </div>
+                    <div class="projects__card">
+                        <a href="https://alsusharifullina.github.io/js30-2.2-image-gallery/image_gallery/"
+                            target="_blank"><img src="./img/project4.PNG" alt="project"></a>
+                    </div>
+                    <div class="projects__card"></div>
+                    <div class="projects__card">
+                        <a href="https://rolling-scopes-school.github.io/alsusharifullina-JSFEPRESCHOOL2024Q2/shelter/main/"
+                            target="_blank"><img src="./img/project-one.png" alt="project"></a>
+                    </div>
+                    <div class="projects__card">
+                        <a href="https://alsusharifullina.github.io/cssMemeSlider/cssMemeSlider/" target="_blank"><img
+                                src="./img/project2.PNG" alt="project"></a>
+                    </div>
+
+                    <div class="projects__card">
+                        <a href="https://alsusharifullina.github.io/js30-1.1-eco-sounds/js30-1.1/" target="_blank"><img
+                                src="./img/project3.PNG" alt="project"></a>
+                    </div>
+                    <div class="projects__card">
+                        <a href="https://rolling-scopes-school.github.io/alsusharifullina-JSFE2024Q4/christmas-shop/main/"
+                            target="_blank"><img src="./img/HeroSection.png" alt="project"></a>
+                    </div>
+                    <div class="projects__card"></div>
+                    <div class="projects__card">
+                        <a href="https://alsusharifullina.github.io/cvv/" target="_blank"><img src="./img/proj.PNG"
+                                alt="project"></a>
+                    </div>
+                </div>
+            </section>
+            <!-- end section project -->
+
+            <!-- start code example -->
+            <section class="code" id="code">
+                <div class="code__left">
+                    <a class="code__link" href="https://www.codewars.com/users/alsusharifullina" target="_blank">{codewars}</a>
+                    <h2 class="code__title">CODE EXAMPLE</h2>
+                </div>
+                <div class="code__right">
+                    <pre>
+                        <code>
+function getOpenBtn(){
+    let openBtn = document.createElement('button')
+    openBtn.textContent = 'Открыть меня'
+    openBtn.onclick = function(){
+    if (menu.classList.contains('open') === true){
+    openBtn.textContent = 'Открыть меня'
+    }else{
+    openBtn.textContent = 'Закрыть меня'
+    menu.classList.add('open')
+    }
+    }
+    return openBtn
+    }
+</code>
+                    </pre>
+                </div>
+            </section>
+        </main>
+        <!-- end main -->
+
+        <footer class="contacts" id="contacts">
+            <div class="constant__left">
+                <div class="constant__cv">
+                    <a href="./CV-Resume.en.pdf" target="_blank">CV[en]</a>
+                    <a href="./CV-Resume.ru.pdf" target="_blank">CV[ru]</a>
+                </div>
+                <h2 class="contacts__title">contacts</h2>
+            </div>
+            <div class="contacts__right">
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <p>[GitHub]</p>
+                        <a href="https://github.com/AlsuSharifullina" target="_blank">github.com/AlsuSharifullina</a>
+                    </li>
+                    <li class="contacts__item">
+                        <p>[linkedin]</p>
+                        <a href="https://www.linkedin.com/in/alsu-sharifullina-31315726b/" target="_blank">Alsu
+                            Sharifullina</a>
+                    </li>
+                    <li class="contacts__item">
+                        <p>[Telegram]</p>
+                        <a href="https://t.me/missalka" target="_blank">@missalka</a>
+                    </li>
+                    <li class="contacts__item">
+                        <p>[mail]</p>
+                        <a href="mailto:sharifullinaalsu8@gmail.com" target="_blank">sharifullinaalsu8@gmail.com</a>
+                    </li>
+                    <li class="contacts__item">
+                        <p>[rs]</p>
+                        <a href="https://rs.school/courses/javascript-ru" target="_blank" aria-label="RS School course page">
+                          <img src="img/rs-school-logo.svg" alt="">
+                        </a>
+                        <p>[made in 2025 years]</p>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
